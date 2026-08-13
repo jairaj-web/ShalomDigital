@@ -859,7 +859,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .hamburger { display: flex; z-index: 1102; }
 
   .hero { padding: 170px 0 90px; }
-  .hero h1 { font-size: clamp(30px, 8vw, 40px); }
+  .hero-content, .hero-photo-card, .hero-card { min-width: 0; }
+  .hero h1 { font-size: clamp(30px, 8vw, 40px); overflow-wrap: break-word; }
   .hero p.lead { font-size: 16px; }
   .hero-badge { font-size: 12px; padding: 7px 14px; }
   .hero-stats { gap: 20px 32px; }
