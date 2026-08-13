@@ -21,6 +21,11 @@
       var p = window.location.pathname;
       if (p.endsWith(".html") && p !== "/404.html") {
         window.location.replace(p.replace(/\.html$/, "/"));
+        return;
+      }
+      var seg = p.split("/").filter(Boolean).pop() || "";
+      if (["about", "services", "portfolio", "pricing", "contact", "thank-you"].indexOf(seg) !== -1 && !p.endsWith("/")) {
+        window.location.replace(p + "/");
       }
     })();
   </script>
