@@ -868,6 +868,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .hero-stats .stat b { font-size: 24px; }
   .hero-card { padding: 24px; }
   .hero-card-head { flex-wrap: wrap; row-gap: 12px; }
+  .lead-copy-c { min-width: 55%; margin-left: 0; }
   .hero-photo-card img { height: 220px; }
   .chart-svg { height: 90px; }
   .scroll-hint { display: none; }
