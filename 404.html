@@ -16,6 +16,14 @@
     .nf { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 140px 0 90px; }
     .nf-code { font-size: clamp(90px, 18vw, 170px); line-height: 1; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; font-family: "Poppins", sans-serif; }
   </style>
+  <script>
+    (function () {
+      var p = window.location.pathname;
+      if (p.endsWith(".html") && p !== "/404.html") {
+        window.location.replace(p.replace(/\.html$/, "/"));
+      }
+    })();
+  </script>
 </head>
 <body>
   <nav class="navbar scrolled">
