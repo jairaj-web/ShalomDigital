@@ -135,7 +135,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   animation: topbar-scroll 22s linear infinite;
 }
 .topbar-marquee span { padding-right: 48px; color: var(--gold-300); font-weight: 600; letter-spacing: 0.03em; }
-.topbar-marquee span .offer-flag { margin-right: 6px; }
+.topbar-marquee span .offer-flag { margin-right: 6px; vertical-align: -2px; }
+.topbar-marquee .offer-flag { display: inline-block; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.35); }
 @keyframes topbar-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
