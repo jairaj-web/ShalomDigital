@@ -52,9 +52,13 @@
   }
 
   /* ---------- Active nav link ---------- */
-  var path = window.location.pathname.split("/").pop() || "index.html";
+  var pathSeg = window.location.pathname.replace(/\/+$/, "").split("/");
+  var current = pathSeg.pop().replace(/\.html$/, "") || "";
+  if (current === "ShalomDigital") current = "";
   document.querySelectorAll(".nav-links a").forEach(function (link) {
-    if (link.getAttribute("href") === path) link.classList.add("active");
+    var href = (link.getAttribute("href") || "").replace(/\.html$/, "").replace(/\/$/, "");
+    if (href === "./") href = "";
+    if (href === current) link.classList.add("active");
   });
 
   /* ---------- Scroll reveal ---------- */
