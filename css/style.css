@@ -127,7 +127,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .topbar.hide { transform: translateY(-100%); }
-.topbar .verse { font-style: italic; opacity: 0.5; }
+.topbar .verse { font-style: italic; opacity: 0.3; }
 .topbar .ref { color: var(--gold-400); font-weight: 600; margin-left: 4px; }
 
 /* ---------- Navbar ---------- */
@@ -918,6 +918,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .faq-a p { padding: 0 18px 18px; }
 
   .footer-bottom { justify-content: center; text-align: center; }
+}
+
+/* ============================================
+   Footer verse watermark
+   ============================================ */
+.verse-watermark {
+  text-align: center;
+  font-style: italic;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.28);
+  padding: 0 16px 18px;
+  letter-spacing: 0.02em;
+}
+.verse-watermark .ref { color: rgba(251, 191, 36, 0.4); margin-left: 4px; font-weight: 600; font-style: normal; }
+
+@media (max-width: 480px) {
+  .verse-watermark { font-size: 10px; }
 }
 
 @media (max-width: 480px) {
