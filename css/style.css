@@ -127,7 +127,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .topbar.hide { transform: translateY(-100%); }
-.topbar .verse { font-style: italic; }
+.topbar .verse { font-style: italic; opacity: 0.5; }
 .topbar .ref { color: var(--gold-400); font-weight: 600; margin-left: 4px; }
 
 /* ---------- Navbar ---------- */
