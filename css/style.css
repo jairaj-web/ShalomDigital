@@ -124,11 +124,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   text-align: center;
   padding: 9px 16px;
   line-height: 1.5;
+  overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .topbar.hide { transform: translateY(-100%); }
-.topbar .verse { font-style: italic; opacity: 0.3; }
-.topbar .ref { color: var(--gold-400); font-weight: 600; margin-left: 4px; }
+.topbar-marquee {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: topbar-scroll 22s linear infinite;
+}
+.topbar-marquee span { padding-right: 48px; color: var(--gold-300); font-weight: 600; letter-spacing: 0.03em; }
+.topbar-marquee span .offer-flag { margin-right: 6px; }
+@keyframes topbar-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topbar-marquee { animation: none; justify-content: center; width: 100%; }
+}
 
 /* ---------- Navbar ---------- */
 .navbar {
