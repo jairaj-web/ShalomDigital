@@ -943,11 +943,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   text-align: center;
   font-style: italic;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.14);
   padding: 0 16px 18px;
   letter-spacing: 0.02em;
 }
-.verse-watermark .ref { color: rgba(251, 191, 36, 0.4); margin-left: 4px; font-weight: 600; font-style: normal; }
+.verse-watermark .ref { color: rgba(251, 191, 36, 0.22); margin-left: 4px; font-weight: 600; font-style: normal; }
 
 @media (max-width: 480px) {
   .verse-watermark { font-size: 10px; }
