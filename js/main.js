@@ -28,6 +28,7 @@
       hamburger.classList.remove("open");
       navLinks.classList.remove("open");
       hamburger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
     }
     hamburger.addEventListener("click", function () {
       var isOpen = navLinks.classList.contains("open");
@@ -37,6 +38,7 @@
         hamburger.classList.add("open");
         navLinks.classList.add("open");
         hamburger.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
       }
     });
     navLinks.querySelectorAll("a").forEach(function (link) {

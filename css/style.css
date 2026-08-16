@@ -135,7 +135,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   animation: topbar-scroll 22s linear infinite;
 }
 .topbar-marquee:hover, .topbar:active .topbar-marquee { animation-play-state: paused; }
-.topbar-marquee span { padding-right: 48px; color: var(--gold-300); font-weight: 600; letter-spacing: 0.03em; }
+.topbar-marquee span { padding-right: 48px; color: var(--gold-400); font-weight: 600; letter-spacing: 0.03em; }
 .topbar-marquee span .offer-flag { margin-right: 6px; vertical-align: -2px; }
 .topbar-marquee .offer-flag { display: inline-block; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.35); }
 @keyframes topbar-scroll {
@@ -195,7 +195,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .nav-cta { padding: 11px 24px; border-radius: 50px; font-size: 14px; border: 2px solid var(--gold-400); color: var(--gold-400); font-family: "Poppins", sans-serif; font-weight: 600; }
 .nav-cta:hover { background: var(--gold-400); color: var(--navy-900); }
 
-.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; position: relative; z-index: 1102; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 9px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; position: relative; z-index: 1102; }
 .hamburger span { width: 26px; height: 3px; background: var(--white); border-radius: 3px; transition: var(--transition); }
 .navbar.scrolled .hamburger span { background: var(--navy-800); }
 .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
@@ -880,13 +880,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding-left: 44px; padding-right: 0; }
   .timeline::before { left: 22px; transform: none; }
   .timeline-item::before { left: 15px !important; right: auto !important; }
-}
-
-@media (max-width: 768px) {
-  .section { padding: 64px 0; }
-  .container { width: 94%; }
-  .topbar { font-size: 12px; padding: 7px 12px; }
-  .topbar .container { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   .nav-links {
     position: fixed; top: 0; right: -100%; width: min(320px, 82vw);
@@ -908,6 +901,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     font-size: 15px;
   }
   .hamburger { display: flex; z-index: 1102; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .container { width: 94%; }
+  .topbar { font-size: 12px; padding: 7px 12px; }
+  .topbar .container { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   .hero { padding: 170px 0 90px; }
   .hero-content, .hero-photo-card, .hero-card { min-width: 0; }
