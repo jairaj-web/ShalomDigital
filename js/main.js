@@ -116,20 +116,24 @@
   /* ---------- Portfolio filters ---------- */
   var filterBtns = document.querySelectorAll(".filter-btn");
   var caseCards = document.querySelectorAll(".case-card");
+  var filterEmpty = document.getElementById("filter-empty");
   filterBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
       filterBtns.forEach(function (b) { b.classList.remove("active"); });
       btn.classList.add("active");
       var filter = btn.getAttribute("data-filter");
+      var visible = 0;
       caseCards.forEach(function (card) {
         var cat = card.getAttribute("data-category");
         var show = filter === "all" || cat === filter;
         card.style.display = show ? "" : "none";
         if (show) {
+          visible++;
           card.classList.remove("reveal");
           card.classList.add("reveal", "visible");
         }
       });
+      if (filterEmpty) filterEmpty.style.display = visible === 0 ? "" : "none";
     });
   });
 
