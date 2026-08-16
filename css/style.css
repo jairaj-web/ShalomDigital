@@ -553,7 +553,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   border-radius: 50%; border: 40px solid rgba(255,255,255,0.06);
 }
 .stat-item { text-align: center; }
-.stat-item b { display: block; font-family: "Poppins", sans-serif; font-size: 46px; font-weight: 700; color: var(--white); }
+.stat-item b { display: block; font-family: "Poppins", sans-serif; font-size: 32px; font-weight: 700; color: var(--white); }
 .stat-item b .suffix { color: var(--gold-400); }
 .stat-item span { color: rgba(255,255,255,0.8); font-size: 15px; }
 
