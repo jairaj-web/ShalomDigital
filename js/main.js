@@ -150,7 +150,7 @@
       });
       var notes = document.querySelectorAll("[data-note]");
       notes.forEach(function (n) {
-        n.textContent = annual ? n.getAttribute("data-note-annual") : n.getAttribute("data-note-monthly");
+        n.textContent = annual ? n.getAttribute("data-note-annual") : n.getAttribute("data-note");
       });
     });
   }
